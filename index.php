@@ -168,7 +168,7 @@
             float: right;
             color: whitesmoke;
             padding-right: 100px;
-            font-size: 50px;
+            font-size: 40px;
             font-weight: bolder;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
@@ -389,7 +389,7 @@
             $("#rClouds1").empty();
         }
         $(() => {
-            fakeLoad();
+
             $("#load").click(() => {
                 getWeather();
             });
