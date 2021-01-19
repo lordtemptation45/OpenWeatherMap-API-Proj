@@ -86,7 +86,7 @@
             padding: 1.25rem
         }
         
-        .card-weather .weather-date-location {
+        .card-weather .inputWeather {
             padding: 0 0 38px
         }
         
@@ -144,13 +144,13 @@
             background: #ffffff
         }
         
-        .card-weather .weakly-weather {
+        .card-weather .weatherDetails {
             background: #ffffff;
             overflow-x: auto
         }
         
-        .card-weather .weakly-weather .weakly-weather-item {
-            flex: 0 18%;
+        .card-weather .weatherDetails .weatherDetails-item {
+            flex: 0 20%;
             padding: 1rem;
             text-align: center
         }
@@ -160,12 +160,14 @@
             margin-bottom: 0 !important
         }
         
-        .card-weather .weakly-weather .weakly-weather-item i {
+        .card-weather .weatherDetails .weatherDetails-item i {
             font-size: 1.2rem
         }
         
         .showCity1 h1 {
             float: right;
+            margin-left: 120px;
+            margin-left: auto;
             color: whitesmoke;
             padding-right: 100px;
             font-size: 40px;
@@ -183,67 +185,70 @@
                     <div class="col-lg-8 grid-margin stretch-card">
                         <div class="card card-weather">
                             <div class="card-body">
-                                <div class="weather-date-location">
+                                <div class="inputWeather">
                                     <div class="showCity" id="cityName">
                                         <h1 id="cityName"></h1>
                                     </div>
                                     <div class="showCity1" id="showCity1">
                                         <h1 id="cityName1"></h1>
+                                        <br>
+                                        <br>
                                     </div>
+
                                     <input type="text" id="lat" placeholder="Latitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 10px;">
                                     <input type="text" id="lon" placeholder="Longtitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 20px; ">
                                     <button id="load" class="btn btn-primary btn-sm" style=" width: 100px; margin-left: 52px; margin-top: 30px;"><b>Load</b></button>
                                 </div>
                             </div>
                             <div class="testData">
-                                <div class="d-flex weakly-weather">
-                                    <div class="weakly-weather-item">
+                                <div class="d-flex weatherDetails">
+                                    <div class="weatherDetails-item">
                                         <span id="mTemp" class="mb-0"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
                                         <span class="mb-0" id="wSpeed"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
 
                                         <span class="mb-0" id="sRise"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
 
                                         <span class="mb-0" id="sSet"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
 
                                         <span class="mb-0" id="rClouds"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
 
                                         <span class="mb-0" id="humid"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="realData">
-                                <div class="d-flex weakly-weather">
-                                    <div class="weakly-weather-item">
+                                <div class="d-flex weatherDetails">
+                                    <div class="weatherDetails-item">
                                         <i class="fas fa-temperature-high" style="color: grey; font-size: 20px;"></i>
                                         <span id="mTemp1" class="mb-0"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
                                         <i class="	fas fa-wind" style="color: grey; font-size: 20px;"></i>
                                         <span class="mb-0" id="wSpeed1"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
                                         <i class="fas fa-sun" style="color: grey; font-size: 20px;"></i>
                                         <span class="mb-0" id="sRise1"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
                                         <i class="fas fa-moon	" style="color: grey; font-size: 20px;"></i>
                                         <span class="mb-0" id="sSet1"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
                                         <i class="fas fa-cloud" style="color: grey; font-size: 20px;"></i>
                                         <span class="mb-0" id="rClouds1"></span>
                                     </div>
-                                    <div class="weakly-weather-item">
+                                    <div class="weatherDetails-item">
                                         <i class="fas fa-tint" style="color:grey;"></i>
                                         <span class="mb-0" id="humid1"></span>
                                     </div>
@@ -376,6 +381,7 @@
 
             .fail((xhr, status, err) => {
                 console.log("error")
+
             });
         }
 
