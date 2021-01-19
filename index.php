@@ -191,7 +191,7 @@
                                         <h1 id="cityName1"></h1>
                                     </div>
                                     <input type="text" id="lat" placeholder="Latitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 10px; ">
-                                    <input type="text" id="lon" placeholder="Longtitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 20px; ;">
+                                    <input type="text" id="lon" placeholder="Longtitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 20px;  ">
                                     <button id="load" class="btn btn-primary btn-sm" style=" width: 100px; margin-left: 52px; margin-top: 30px;"><b>Load</b></button>
                                 </div>
                             </div>
@@ -259,7 +259,7 @@
     <script>
         // 
         function fakeLoad() {
-            var url = "https://api.openweathermap.org/data/2.5/weather?lat=43.7696&lon=11.2558&appid=0eb396a5cdcd36c58c23d755cea2208e&units=metric&mode=xml";
+            var url = "https://api.openweathermap.org/data/2.5/weather?lat=43.7696&lon=11.2558&units=metric&appid=0eb396a5cdcd36c58c23d755cea2208e";
             $.get(url)
                 .done((data) => {
                     console.log(data)
