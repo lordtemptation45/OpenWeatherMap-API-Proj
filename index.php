@@ -191,7 +191,7 @@
                                         <h1 id="cityName1"></h1>
                                     </div>
                                     <input type="text" id="lat" placeholder="Latitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 10px; ">
-                                    <input type="text" id="lon" placeholder="Longtitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 20px; ">
+                                    <input type="text" id="lon" placeholder="Longtitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 20px; ;">
                                     <button id="load" class="btn btn-primary btn-sm" style=" width: 100px; margin-left: 52px; margin-top: 30px;"><b>Load</b></button>
                                 </div>
                             </div>
@@ -391,7 +391,6 @@
         $(() => {
             fakeLoad();
             $("#load").click(() => {
-                ๆ
                 getWeather();
             });
             $("#load").click(() => {
