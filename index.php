@@ -282,7 +282,7 @@
             $(".CityShow1").show();
             $(".testData").hide();
             $(".realData").show();
-            var api = "http://api.openweathermap.org/data/2.5/weather?lat=";
+            var api = "https://api.openweathermap.org/data/2.5/weather?lat=";
             var lat = $("#lat").val();
             var lon = $("#lon").val();
             var units = "&units=metric";
@@ -389,7 +389,7 @@
             $("#rClouds1").empty();
         }
         $(() => {
-
+            fakeLoad();
             $("#load").click(() => {
                 getWeather();
             });
