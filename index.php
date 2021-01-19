@@ -73,7 +73,7 @@
         }
         
         .card-weather .card-body:first-child {
-            background: url(https://images.pexels.com/photos/2582510/pexels-photo-2582510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center;
+            background: url(https://images.pexels.com/photos/1144687/pexels-photo-1144687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center;
             background-size: cover
         }
         
@@ -190,15 +190,15 @@
                                     <div class="showCity1" id="showCity1">
                                         <h1 id="cityName1"></h1>
                                     </div>
-                                    <input type="text" id="lat" placeholder="Latitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 10px; ">
-                                    <input type="text" id="lon" placeholder="Longtitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 20px;  ">
+                                    <input type="text" id="lat" placeholder="Latitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 10px;">
+                                    <input type="text" id="lon" placeholder="Longtitude" class="form-control" style="width: 150px; margin-left: 25px; margin-top: 20px; ">
                                     <button id="load" class="btn btn-primary btn-sm" style=" width: 100px; margin-left: 52px; margin-top: 30px;"><b>Load</b></button>
                                 </div>
                             </div>
                             <div class="testData">
                                 <div class="d-flex weakly-weather">
                                     <div class="weakly-weather-item">
-                                        <span id="temp" class="mb-0"></span>
+                                        <span id="mTemp" class="mb-0"></span>
                                     </div>
                                     <div class="weakly-weather-item">
                                         <span class="mb-0" id="wSpeed"></span>
@@ -225,7 +225,7 @@
                                 <div class="d-flex weakly-weather">
                                     <div class="weakly-weather-item">
                                         <i class="fas fa-temperature-high" style="color: grey; font-size: 20px;"></i>
-                                        <span id="temp1" class="mb-0"></span>
+                                        <span id="mTemp1" class="mb-0"></span>
                                     </div>
                                     <div class="weakly-weather-item">
                                         <i class="	fas fa-wind" style="color: grey; font-size: 20px;"></i>
@@ -259,12 +259,12 @@
     <script>
         // 
         function fakeLoad() {
-            var url = "https://api.openweathermap.org/data/2.5/weather?lat=43.7696&lon=11.2558&units=metric&appid=0eb396a5cdcd36c58c23d755cea2208e";
+            var url = "https://api.openweathermap.org/data/2.5/weather?lat=43.7696&lon=11.2558&appid=0eb396a5cdcd36c58c23d755cea2208e&units=metric&mode=xml";
             $.get(url)
                 .done((data) => {
                     console.log(data)
                     $("#cityName").append(data.name);
-                    $("#temp").append(data.main.temp);
+                    $("#mTemp").append(data.main.temp);
                     $("#wSpeed").append(data.wind.speed);
                     $("#humid").append(data.main.humidity);
                     $("#sRise").append(data.sys.sunrise);
@@ -365,7 +365,7 @@
                 var cloudCover = (data.clouds.all) + " " + "%";
 
                 $("#cityName1").append(data.name);
-                $("#temp1").append(temperature);
+                $("#mTemp1").append(temperature);
                 $("#wSpeed1").append(calSpeed);
                 $("#humid1").append(humidSet);
                 $("#sRise1").append(sunRise);
@@ -381,7 +381,7 @@
 
         function remove() {
             $("#cityName1").empty();
-            $("#temp1").empty();
+            $("#mTemp1").empty();
             $("#wSpeed1").empty();
             $("#humid1").empty();
             $("#sRise1").empty();
@@ -399,6 +399,7 @@
 
         });
     </script>
+
 </body>
 
 </html>
