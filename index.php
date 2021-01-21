@@ -73,7 +73,7 @@
         }
         
         .card-weather .card-body:first-child {
-            background: url(https://images.pexels.com/photos/1144687/pexels-photo-1144687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center;
+            background: url(https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center;
             background-size: cover
         }
         
@@ -168,7 +168,7 @@
             float: right;
             margin-left: 120px;
             margin-left: auto;
-            color: whitesmoke;
+            color: black;
             padding-right: 100px;
             font-size: 40px;
             font-weight: bolder;
@@ -186,10 +186,10 @@
                         <div class="card card-weather">
                             <div class="card-body">
                                 <div class="inputWeather">
-                                    <div class="showCity" id="cityName">
+                                    <div class="showCity">
                                         <h1 id="cityName"></h1>
                                     </div>
-                                    <div class="showCity1" id="showCity1">
+                                    <div class="showCity1">
                                         <h1 id="cityName1"></h1>
                                         <br>
                                         <br>
