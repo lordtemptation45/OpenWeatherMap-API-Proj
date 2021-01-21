@@ -188,6 +188,7 @@
                                 <div class="inputWeather">
                                     <div class="showCity">
                                         <h1 id="cityName"></h1>
+                                        <img src="/image/IMG_2085.JPG" alt="">
                                     </div>
                                     <div class="showCity1">
                                         <h1 id="cityName1"></h1>
