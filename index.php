@@ -172,7 +172,7 @@
             padding-right: 100px;
             font-size: 40px;
             font-weight: bolder;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-shadow: 5px 5px 5px aquamarine;
         }
     </style>
 </head>
